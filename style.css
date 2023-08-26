@@ -1,0 +1,95 @@
+body {
+  background-color: #ecfffb;
+  font-family: "Playfair Display", serif;
+  display: block;
+  margin: 130px 0;
+}
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  position: absolute;
+  font-size: 60px;
+  top: 135px;
+  left: 270px;
+}
+
+h2 {
+  font-size: 80px;
+  font-weight: bolder;
+  position: relative;
+  top: 40px;
+  left: 45px;
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  position: absolute;
+  top: 355px;
+  left: 290px;
+}
+
+p {
+  font-size: 20px;
+  opacity: 0.7;
+  position: absolute;
+  right: 310px;
+  top: 190px;
+}
+
+.footer {
+  font-size: 25px;
+  position: relative;
+  top: 20px;
+}
+
+.search {
+  position: absolute;
+  top: 150px;
+  right: 270px;
+}
+
+.degrees {
+  font-weight: lighter;
+  font-size: 21px;
+  position: relative;
+  top: -35px;
+}
+
+.short {
+  width: 2.5%;
+  position: relative;
+  left: 195px;
+  top: -21px;
+  border-top: 2px solid black;
+}
+
+.below {
+  font-size: 21px;
+  font-weight: lighter;
+  position: relative;
+  top: -129px;
+  left: 195px;
+}
+
+.dot {
+  border-top: 2px dashed black;
+  width: 110%;
+  position: relative;
+  left: -32px;
+}
+
+.space {
+  border: 1px solid #ecfffb;
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px;
+  border-radius: 10px;
+  background-image: url("https://www.thoughtco.com/thmb/WeSKY6c-0qz9rNA5HaV7HC9VHVU=/2124x1414/filters:fill(auto,1)/GettyImages-482252-001-570a81d93df78c7d9edc0d78.jpg");
+}
+
+.round {
+  border-radius: 7px;
+  color: gray;
+}
