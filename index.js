@@ -104,5 +104,5 @@ function searchLocation(event) {
   navigator.geolocation.getCurrentPosition(getLocation);
 }
 
-let location = document.querySelector("#current-location");
-location.addEventListener("click", searchLocation);
+let currentLocation = document.querySelector("#current-location");
+currentLocation.addEventListener("click", searchLocation);
