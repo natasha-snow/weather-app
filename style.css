@@ -13,7 +13,14 @@ h1 {
   left: 270px;
 }
 
-h2 {
+h2::before {
+  font-size: 80px;
+  font-weight: bolder;
+  position: relative;
+  top: 40px;
+  left: 45px;
+}
+h2::after {
   font-size: 80px;
   font-weight: bolder;
   position: relative;
@@ -92,11 +99,4 @@ p {
 .round {
   border-radius: 7px;
   color: gray;
-}
-#current-location:after {
-  font-size: 80px;
-  font-weight: bolder;
-  position: relative;
-  top: 40px;
-  left: 45px;
 }
