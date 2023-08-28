@@ -13,14 +13,15 @@ h1 {
   left: 270px;
 }
 
-h2::before {
+h2 {
   font-size: 80px;
   font-weight: bolder;
   position: relative;
   top: 40px;
   left: 45px;
 }
-h2::after {
+
+#current-location::after {
   font-size: 80px;
   font-weight: bolder;
   position: relative;
