@@ -93,3 +93,10 @@ p {
   border-radius: 7px;
   color: gray;
 }
+#current-location:after {
+  font-size: 80px;
+  font-weight: bolder;
+  position: relative;
+  top: 40px;
+  left: 45px;
+}
