@@ -21,7 +21,7 @@ h2 {
   left: 45px;
 }
 
-#current-location::after {
+#temperature {
   font-size: 80px;
   font-weight: bolder;
   position: relative;
