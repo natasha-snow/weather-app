@@ -45,6 +45,12 @@ p {
   top: 190px;
 }
 
+footer {
+  text-align: center;
+  font-size: 10px;
+  opacity: 0.6;
+}
+
 .footer {
   font-size: 25px;
   position: relative;
