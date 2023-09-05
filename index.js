@@ -24,14 +24,6 @@ function formatDate(date) {
   return `${day} ${currentDate}, ${hours}:${minutes}`;
 }
 
-function search(e) {
-  e.preventDefault();
-  let cityElement = document.querySelector("#city");
-  let cityInput = document.querySelector("#city-input");
-  cityElement.innerHTML = cityInput.value;
-
-  searchCity(cityInput.value);
-}
 
 function searchCity(city) {
   let apiKey = "fa801de90a2720cc335fe2a667b5bbf4";
@@ -55,14 +47,6 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", changeToCelsius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", changeToFahrenheit);
 
 //function 1
 let form = document.querySelector("#search-form");
@@ -75,7 +59,6 @@ function showCurrentLocation(response) {
   let windEl = document.querySelector("#wind");
   let humidityEl = document.querySelector("#humidity");
   let temperatureEl = document.querySelector("#temperature");
-
   let temperature = Math.round(response.data.main.temp);
   let place = response.data.name;
   let humidity = Math.round(response.data.main.humidity);
@@ -85,6 +68,20 @@ function showCurrentLocation(response) {
   temperatureEl.innerHTML = `${temperature}°`;
   windEl.innerHTML = `Wind: ${windSpeed} km/h`;
   humidityEl.innerHTML = `Humidity: ${humidity}%`;
+  icon.setAttribute(
+        "src",
+        "http://openweathermap.org/img/w/" +
+          response.data.weather[0].icon +
+          ".png"
+      );w
+}
+
+function search(e) {
+  e.preventDefault();
+  let cityElement = document.querySelector("#city");
+  let cityInput = document.querySelector("#city-input");
+  cityElement.innerHTML = cityInput.value;
+
 }
 
 //
@@ -104,5 +101,16 @@ function searchLocation(event) {
   navigator.geolocation.getCurrentPosition(getLocation);
 }
 
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", changeToCelsius);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", changeToFahrenheit);
+
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", searchLocation);
+
+searchCity(cityInput.value);
